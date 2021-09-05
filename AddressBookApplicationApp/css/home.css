@@ -57,7 +57,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /*align-items:center;*/
   width: 80%;
   margin: 0 auto;
   padding-bottom: 25px;
@@ -73,8 +73,6 @@ body {
 .person-count {
   background-color: #008cff;
   color: #ffffff;
-  border-radius: 42%;
-  font-size: 16px;
   width: 26px;
   text-align: center;
   display: inline-block;
@@ -103,7 +101,6 @@ body {
 .table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 15px;
   min-width: 800px;
 }
 

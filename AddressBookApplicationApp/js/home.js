@@ -1,6 +1,15 @@
+let contactList;
 window.addEventListener("DOMContentLoaded", (event) => {
+  contactList = getContactDataFromStorage();
+  document.querySelector(".person-count").textContent = contactList.length;
   createInnerHtml();
 });
+
+const getContactDataFromStorage = () => {
+  return localStorage.getItem("ContactList")
+    ? JSON.parse(localStorage.getItem("ContactList"))
+    : [];
+};
 
 const createInnerHtml = () => {
   const headerHtml = ` 
@@ -12,14 +21,12 @@ const createInnerHtml = () => {
       <th>Phone Number</th>
       <th>Email</th>
     `;
-  let contactList = createContactJSON();
   if (contactList.length == 0) return;
-  document.querySelector(".person-count").textContent = contactList.length;
   let innerHtml = `${headerHtml}`;
   for (const contactData of contactList) {
     innerHtml = `${innerHtml}
     <tr>
-        <td>${contactData._firstName}${contactData._lastName}</td>
+        <td>${contactData._firstName} ${contactData._lastName}</td>
         <td>${contactData._address}</td>
         <td>${contactData._city}</td>
         <td>${contactData._state}</td>
@@ -27,9 +34,9 @@ const createInnerHtml = () => {
         <td>${contactData._phone}</td>
         <td>${contactData._email}</td>
         <td>
-        <img name="${contactData._id}" onclick="removie(this)" alt="delete" 
+        <img id="${contactData._id}" onclick="remove(this)" alt="delete" 
                 src="../assets/images/delete-black-18dp.svg">
-        <img name="${contactData._id}" alt="edit" onclick="update(this)"
+        <img id="${contactData._id}" alt="edit" onclick="update(this)"
                 src="../assets/images/create-black-18dp.svg">
         </td>
     </tr>
@@ -38,28 +45,19 @@ const createInnerHtml = () => {
   document.querySelector("#table-display").innerHTML = innerHtml;
 };
 
-const createContactJSON = () => {
-  let contactListLocal = [
-    {
-      _firstName: "Mandeep",
-      _lastName: " Singh",
-      _address: "Shriwardhan Raigad",
-      _city: "Mumbai",
-      _email: "mandeep@gmail.com",
-      _phone: "9166677890",
-      _state: "Maharashtra",
-      _zip: "402110",
-    },
-    {
-      _firstName: "Lakhvinder",
-      _lastName: " Singh",
-      _address: "Goregoan Mahad",
-      _city: "Mumbai",
-      _email: "lakhvinder@gmail.co.in",
-      _phone: "1234567890",
-      _state: "Maharashtra",
-      _zip: "400400",
-    },
-  ];
-  return contactListLocal;
+const remove = (node) => {
+  let contact = contactList.find((cnt) => cnt._id == node.id);
+  if (!contact) return;
+  const index = contactList.map((cnt) => cnt._id).indexOf(contact._id);
+  contactList.splice(index, 1);
+  document.querySelector(".person-count").textContent = contactList.length;
+  localStorage.setItem("ContactList", JSON.stringify(contactList));
+  createInnerHtml();
+};
+
+const update = (node) => {
+  let contact = contactList.find((cnt) => cnt._id == node.id);
+  if (!contact) return;
+  localStorage.setItem("editContact", JSON.stringify(contact));
+  window.location.replace(siteproperties.add_contact_page);
 };
