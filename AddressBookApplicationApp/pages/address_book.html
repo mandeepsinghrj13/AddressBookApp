@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
         rel="stylesheet">
     <title>Address Book Form</title>
+    <link rel="shortcut icon" href="#" />
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             <div class="row-content-exp">
                 <div class="oneRow-content">
                     <label class="label text" for="city">City</label>
-                    <select class="select-input" required>
+                    <select class="select-input" id="city" name="City" required>
                         <option value="" selected disabled hidden>Select City</option>
                         <option value="Amaravathi">Amaravathi</option>
                         <option value="Hyderabad">Hyderabad</option>
@@ -57,7 +58,7 @@
                 </div>
                 <div class="oneRow-content">
                     <label class="label text" for="state">State</label>
-                    <select class="select-input" required>
+                    <select class="select-input" id="state" name="State" required>
                         <option value="" selected disabled hidden>Select State</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Telanagana">Telanagana</option>
@@ -81,7 +82,6 @@
                 <label class="label text" for="email">Email</label>
                 <input class="input" type="text" name="Email" id="email" required>
                 <error-output class="email-error" for="text"></error-output>
-                `
             </div>
             <div class="submit-reset">
                 <button type="submit" class="button submitButton" id="submitButton">Add</button>
@@ -90,6 +90,7 @@
         </form>
     </div>
     <script src="../js/address_book_form.js"></script>
+    <script src="../js/address_book.js"></script>
 </body>
 
 </html>
