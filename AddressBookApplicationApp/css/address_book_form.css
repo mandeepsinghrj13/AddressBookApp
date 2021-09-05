@@ -1,24 +1,18 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0px;
+  margin: 0;
   height: 100%;
 }
 
 .header {
   padding: 15px 0;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .header-content {
-  margin-top: 20px;
-  margin-left: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   border: 0px solid green;
 }
 
@@ -26,7 +20,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 80%;
-  align-items: flex-start;
+  align-items: center;
   border: 0px solid green;
 }
 
@@ -35,55 +29,144 @@ body {
   height: 10%;
 }
 
-.add-text {
-  /*font: normal normal bold 20px/25px Montserrat;*/
-  font: normal normal bold 22px/25px Montserrat;
+.addbook-text {
+  font: normal normal bold 15px/25px Montserrat;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
-  color: #008cff;
+  margin: -1020px;
+  color: blue;
   text-transform: capitalize;
-  padding: 10px;
+  flex-direction: row;
 }
-
-.add-book {
+.address-book {
   color: #42515f;
+  padding: 0px;
+  margin: -1020px;
+  flex-direction: row;
 }
 
-.form-header {
-  top: 173px;
-  left: 427px;
-  width: 1067px;
-  height: 803px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+* {
+  box-sizing: border-box;
+}
+
+.form-content {
+  padding-top: 40px;
+  min-height: calc(100% -80px);
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid green;
+}
+
+.form {
+  width: 70%;
+  background: white 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
-  border: 1px solid #f5f5f5;
   border-radius: 8px;
   opacity: 1;
-  margin-top: 40px;
-  margin-left: 150px;
-  border-radius: 5px;
 }
 
-.form-header-text {
-  top: 173px;
-  left: 427px;
-  width: 1067px;
-  height: 108px;
-  background: #008cff 0% 0% no-repeat padding-box;
-  opacity: 1;
-  padding-top: 40px;
-  border-radius: 5px;
-}
-
-.form-heading {
-  width: 318px;
-  height: 37px;
-  text-align: center;
-  font: normal normal normal 28px/37px Roboto;
+.form-head {
+  font: normal normal bold 24px/37px Roboto;
   letter-spacing: 0px;
-  color: #ffffff;
-  text-transform: uppercase;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  text-transform: capitalize;
   opacity: 1;
-  margin: 50px 250px 0px 250px;
-  display: inline;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.row-content {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: left;
+  border: 0px solid green;
+  padding-top: 40px;
+}
+
+.head {
+  flex: display;
+  flex: row;
+}
+
+.cross {
+  align-items: right;
+  margin-right: 50px;
+}
+
+.input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.phone-content {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: left;
+  border: 0px solid green;
+  padding-top: 00px;
+}
+
+.address {
+  width: 100%;
+  line-height: 700%;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font: normal normal normal 16px Roboto;
+  letter-spacing: 0px;
+  color: #42525f;
+  background-color: transparent;
+  font: normal normal bold 15px/25px Montserrat;
+}
+
+.address-content {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: left;
+  border: 0px solid green;
+  padding-top: 00px;
+  font: normal normal 15px/25px Montserrat;
+}
+
+.row-citystate {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+  border: 0px solid green;
+  padding-top: 00px;
+}
+
+.input1 {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  resize: vertical;
+  line-height: 80%;
+  margin-block-start: -100px;
 }
