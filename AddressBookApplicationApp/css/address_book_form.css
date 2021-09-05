@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+.header {
+  padding: 15px 0;
+  background-color: #ffffff;
+}
+
+.header-content {
+  margin-top: 20px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 0px solid green;
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: flex-start;
+  border: 0px solid green;
+}
+
+.logo-content-img {
+  border: solid 10px #0d0e0f;
+  height: 10%;
+}
+
+.add-text {
+  /*font: normal normal bold 20px/25px Montserrat;*/
+  font: normal normal bold 22px/25px Montserrat;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0px;
+  color: #008cff;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+.add-book {
+  color: #42515f;
+}
+
+.form-header {
+  top: 173px;
+  left: 427px;
+  width: 1067px;
+  height: 803px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  opacity: 1;
+  margin-top: 40px;
+  margin-left: 150px;
+  border-radius: 5px;
+}
+
+.form-header-text {
+  top: 173px;
+  left: 427px;
+  width: 1067px;
+  height: 108px;
+  background: #008cff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-top: 40px;
+  border-radius: 5px;
+}
+
+.form-heading {
+  width: 318px;
+  height: 37px;
+  text-align: center;
+  font: normal normal normal 28px/37px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 50px 250px 0px 250px;
+  display: inline;
+}
